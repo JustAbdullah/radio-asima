@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
+import 'package:get/get.dart';
 import 'package:radio_asima/core/constant/app_text_styles.dart';
 import 'package:radio_asima/customWidgets/custom_text.dart';
+
+import 'HomeScreen/home_screen.dart';
 
 class WebTesting extends StatelessWidget {
   const WebTesting({super.key});
@@ -21,6 +25,19 @@ class WebTesting extends StatelessWidget {
                     fontSizeWidth: 20,
                     fontFamily: AppTextStyles.Almarai,
                     fontColor: Colors.black),
+                leading: InkWell(
+                    onTap: () {
+                      Get.offAll(HomeScreen());
+                    },
+                    child: SizedBox(
+                      width: 20.w,
+                      height: 20.h,
+                      child: Image.asset(
+                        "android/assets/images/icons8-back-64.png",
+                        width: 40.w,
+                        height: 40.h,
+                      ),
+                    )),
               ),
             ),
       },

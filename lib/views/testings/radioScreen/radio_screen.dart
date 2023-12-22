@@ -11,6 +11,7 @@ import 'package:radio_player/radio_player.dart';
 import '../../../core/constant/app_text_styles.dart';
 import '../../../customWidgets/custom_container.dart';
 import '../../../customWidgets/custom_text.dart';
+import '../../HomeScreen/home_screen.dart';
 
 class RadioScreenTestring extends StatefulWidget {
   const RadioScreenTestring({super.key});
@@ -75,18 +76,17 @@ class _RadioScreenState extends State<RadioScreenTestring> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          TextCustom(
-                            theText: "راديو العاصمة اونلاين",
-                            fontSizeWidth: 20,
-                            fontFamily: AppTextStyles.Marhey,
-                            fontColor: AppColors.theAppColorYellow,
-                            fontWeight: FontWeight.bold,
-                          ),
+                          InkWell(
+                              onTap: () {
+                                Get.to(HomeScreen());
+                              },
+                              child: Image.asset(
+                                  "android/assets/images/icons8-more-than-100.png")),
                           Image.asset(
                             "${ImagesPath.LogoApp}",
                             width: 120.w,
                             fit: BoxFit.cover,
-                          )
+                          ),
                         ],
                       ),
                     ))),

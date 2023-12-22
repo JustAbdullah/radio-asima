@@ -110,127 +110,136 @@ class HomeScreen extends StatelessWidget {
                             colorContainer: AppColors.whiteColorTypeOne,
                             heigthContainer: 150,
                             widthContainer: MediaQuery.of(context).size.width,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Column(children: [
-                                  Lottie.asset("${ImagesPath.Ourservices}",
-                                      width: 100.w,
-                                      height: 70.h,
-                                      fit: BoxFit.contain),
+                            child: SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  SingleChildScrollView(
+                                    child: Column(children: [
+                                      Lottie.asset("${ImagesPath.Ourservices}",
+                                          width: 100.w,
+                                          height: 70.h,
+                                          fit: BoxFit.contain),
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      TextCustom(
+                                        theText: "خدماتنا المختلفة",
+                                        fontSizeWidth: 15,
+                                        fontFamily: AppTextStyles.Marhey,
+                                        fontColor: AppColors.blackColor,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                      SizedBox(
+                                        height: 10.h,
+                                      ),
+                                      InkWell(
+                                        onTap: () {
+                                          Get.to(WebTesting());
+                                        },
+                                        child: ContainerCustom(
+                                          theBorderRadius: 5,
+                                          heigthContainer: 35.h,
+                                          widthContainer: 100.w,
+                                          colorContainer:
+                                              AppColors.balckColorTypeThree,
+                                          child: TextCustom(
+                                              theText: "الإطلاع",
+                                              fontSizeWidth: 15,
+                                              fontFamily: AppTextStyles.Cairo,
+                                              fontWeight: FontWeight.w500,
+                                              fontColor: AppColors.whiteColor),
+                                        ),
+                                      )
+                                    ]),
+                                  ),
                                   SizedBox(
-                                    height: 10,
+                                    width: 20.w,
                                   ),
-                                  TextCustom(
-                                    theText: "خدماتنا المختلفة",
-                                    fontSizeWidth: 15,
-                                    fontFamily: AppTextStyles.Marhey,
-                                    fontColor: AppColors.blackColor,
-                                    fontWeight: FontWeight.bold,
+                                  SingleChildScrollView(
+                                    child: Column(children: [
+                                      Lottie.asset("${ImagesPath.Email}",
+                                          width: 100.w,
+                                          height: 70.h,
+                                          fit: BoxFit.contain),
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      TextCustom(
+                                        theText: "التواصل الرسمي",
+                                        fontSizeWidth: 15,
+                                        fontFamily: AppTextStyles.Almarai,
+                                        fontColor: AppColors.blackColor,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                      SizedBox(
+                                        height: 10.h,
+                                      ),
+                                      InkWell(
+                                        onTap: () async {
+                                          Get.to(Email());
+                                        },
+                                        child: ContainerCustom(
+                                          theBorderRadius: 5,
+                                          heigthContainer: 35.h,
+                                          widthContainer: 100.w,
+                                          colorContainer:
+                                              AppColors.balckColorTypeThree,
+                                          child: TextCustom(
+                                              theText: "الإطلاع",
+                                              fontSizeWidth: 15,
+                                              fontFamily: AppTextStyles.Cairo,
+                                              fontWeight: FontWeight.w500,
+                                              fontColor: AppColors.whiteColor),
+                                        ),
+                                      )
+                                    ]),
                                   ),
                                   SizedBox(
-                                    height: 10.h,
+                                    width: 20.w,
                                   ),
-                                  InkWell(
-                                    onTap: () {
-                                      Get.to(WebTesting());
-                                    },
-                                    child: ContainerCustom(
-                                      theBorderRadius: 5,
-                                      heigthContainer: 35.h,
-                                      widthContainer: 100.w,
-                                      colorContainer:
-                                          AppColors.balckColorTypeThree,
-                                      child: TextCustom(
-                                          theText: "الإطلاع",
-                                          fontSizeWidth: 15,
-                                          fontFamily: AppTextStyles.Cairo,
-                                          fontWeight: FontWeight.w500,
-                                          fontColor: AppColors.whiteColor),
-                                    ),
+                                  SingleChildScrollView(
+                                    child: Column(children: [
+                                      Lottie.asset("${ImagesPath.info}",
+                                          width: 100.w,
+                                          height: 70.h,
+                                          fit: BoxFit.contain),
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      TextCustom(
+                                        theText: "من نحن",
+                                        fontSizeWidth: 15,
+                                        fontFamily: AppTextStyles.Marhey,
+                                        fontColor: AppColors.blackColor,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                      SizedBox(
+                                        height: 10.h,
+                                      ),
+                                      InkWell(
+                                        onTap: () {
+                                          Get.to(AboutUS());
+                                        },
+                                        child: ContainerCustom(
+                                          theBorderRadius: 5,
+                                          heigthContainer: 35.h,
+                                          widthContainer: 100.w,
+                                          colorContainer:
+                                              AppColors.balckColorTypeThree,
+                                          child: TextCustom(
+                                              theText: "الإطلاع",
+                                              fontSizeWidth: 15,
+                                              fontFamily: AppTextStyles.Cairo,
+                                              fontWeight: FontWeight.w500,
+                                              fontColor: AppColors.whiteColor),
+                                        ),
+                                      )
+                                    ]),
                                   )
-                                ]),
-                                SizedBox(
-                                  width: 20.w,
-                                ),
-                                Column(children: [
-                                  Lottie.asset("${ImagesPath.Email}",
-                                      width: 100.w,
-                                      height: 70.h,
-                                      fit: BoxFit.contain),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                  TextCustom(
-                                    theText: "التواصل الرسمي",
-                                    fontSizeWidth: 15,
-                                    fontFamily: AppTextStyles.Almarai,
-                                    fontColor: AppColors.blackColor,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                  SizedBox(
-                                    height: 10.h,
-                                  ),
-                                  InkWell(
-                                    onTap: () async {
-                                      Get.to(Email());
-                                    },
-                                    child: ContainerCustom(
-                                      theBorderRadius: 5,
-                                      heigthContainer: 35.h,
-                                      widthContainer: 100.w,
-                                      colorContainer:
-                                          AppColors.balckColorTypeThree,
-                                      child: TextCustom(
-                                          theText: "الإطلاع",
-                                          fontSizeWidth: 15,
-                                          fontFamily: AppTextStyles.Cairo,
-                                          fontWeight: FontWeight.w500,
-                                          fontColor: AppColors.whiteColor),
-                                    ),
-                                  )
-                                ]),
-                                SizedBox(
-                                  width: 20.w,
-                                ),
-                                Column(children: [
-                                  Lottie.asset("${ImagesPath.info}",
-                                      width: 100.w,
-                                      height: 70.h,
-                                      fit: BoxFit.contain),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                  TextCustom(
-                                    theText: "من نحن",
-                                    fontSizeWidth: 15,
-                                    fontFamily: AppTextStyles.Marhey,
-                                    fontColor: AppColors.blackColor,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                  SizedBox(
-                                    height: 10.h,
-                                  ),
-                                  InkWell(
-                                    onTap: () {
-                                      Get.to(AboutUS());
-                                    },
-                                    child: ContainerCustom(
-                                      theBorderRadius: 5,
-                                      heigthContainer: 35.h,
-                                      widthContainer: 100.w,
-                                      colorContainer:
-                                          AppColors.balckColorTypeThree,
-                                      child: TextCustom(
-                                          theText: "الإطلاع",
-                                          fontSizeWidth: 15,
-                                          fontFamily: AppTextStyles.Cairo,
-                                          fontWeight: FontWeight.w500,
-                                          fontColor: AppColors.whiteColor),
-                                    ),
-                                  )
-                                ])
-                              ],
+                                ],
+                              ),
                             )),
                       ),
                       SizedBox(
